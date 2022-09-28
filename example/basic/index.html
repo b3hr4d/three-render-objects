@@ -1,10 +1,14 @@
 <head>
-  <style> body { margin: 0; }</style>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
 
   <script src="//unpkg.com/three"></script>
 
-  <script src="//unpkg.com/three-render-objects"></script>
-  <!--<script src="../../dist/three-render-objects.js"></script>-->
+  <!-- <script src="//unpkg.com/three-render-objects"></script> -->
+  <script src="../../dist/three-render-objects.js"></script>
 </head>
 
 <body>
@@ -12,25 +16,37 @@
 
   <script>
     // Gen random positioned objects
-    const N = 300;
-    const COORD_RANGE = 300;
+    const N = 300
+    const COORD_RANGE = 300
 
-    const objs = [...Array(N)].map(() => new THREE.Mesh(
-      new THREE.SphereGeometry(10, 16, 16),
-      new THREE.MeshBasicMaterial({ color: 'red', transparent: true, opacity: 0.6 })
-    ));
+    const objs = [...Array(N)].map(
+      () =>
+        new THREE.Mesh(
+          new THREE.SphereGeometry(10, 16, 16),
+          new THREE.MeshBasicMaterial({
+            color: "red",
+            transparent: true,
+            opacity: 0.6,
+          })
+        )
+    )
 
-    objs.forEach(obj => {
-      ['x', 'y', 'z'].forEach(dim => obj.position[dim] = Math.random() * COORD_RANGE * 2 - COORD_RANGE);
-    });
+    objs.forEach((obj) => {
+      ;["x", "y", "z"].forEach(
+        (dim) =>
+          (obj.position[dim] = Math.random() * COORD_RANGE * 2 - COORD_RANGE)
+      )
+    })
 
-    const ObjRender = ThreeRenderObjects({ controlType: 'trackball' })
-      (document.getElementById('myscene'))
-      .objects(objs);
+    const ObjRender = ThreeRenderObjects({ controlType: "trackball" })(
+      document.getElementById("myscene")
+    )
+      .objects(objs)
+      .onClick((...e) => console.log(...e))
 
-    (function animate() {
-      ObjRender.tick(); // render it
-      requestAnimationFrame(animate);
-    })(); // IIFE
+    ;(function animate() {
+      ObjRender.tick() // render it
+      requestAnimationFrame(animate)
+    })() // IIFE
   </script>
 </body>
