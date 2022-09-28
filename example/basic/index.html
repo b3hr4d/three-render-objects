@@ -7,8 +7,8 @@
 
   <script src="//unpkg.com/three"></script>
 
-  <script src="//unpkg.com/three-render-objects-fork"></script>
-  <!-- <script src="../../dist/three-render-objects-fork.js"></script> -->
+  <!-- <script src="//unpkg.com/three-render-objects-fork"></script> -->
+  <script src="../../dist/three-render-objects-fork.js"></script>
 </head>
 
 <body>
@@ -43,6 +43,7 @@
     )
       .objects(objs)
       .onClick((...e) => console.log(...e))
+      .onHover((...e) => console.log(...e))
 
     ;(function animate() {
       ObjRender.tick() // render it

@@ -122,11 +122,11 @@ export default Kapsule({
             const topIntersect = intersects.length ? intersects[0] : null
 
             topObject = topIntersect ? topIntersect.object : null
-            state.intersection = topIntersect ? topIntersect : null
+            state.intersection = topIntersect ?? null
           }
 
           if (topObject !== state.hoverObj) {
-            state.onHover(topObject, state.hoverObj)
+            state.onHover(topObject, state.intersection, state.hoverObj)
             state.toolTipElem.innerHTML = topObject
               ? accessorFn(state.tooltipContent)(topObject) || ""
               : ""
