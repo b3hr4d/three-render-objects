@@ -1,6 +1,6 @@
 {
   "name": "three-render-objects-fork",
-  "version": "1.27.6",
+  "version": "1.27.8",
   "description": "Easy way to render ThreeJS objects with built-in interaction defaults",
   "license": "MIT",
   "unpkg": "dist/three-render-objects-fork.min.js",
