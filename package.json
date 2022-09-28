@@ -1,20 +1,20 @@
 {
-  "name": "three-render-objects",
-  "version": "1.27.4",
+  "name": "three-render-objects-fork-fork",
+  "version": "1.27.5",
   "description": "Easy way to render ThreeJS objects with built-in interaction defaults",
   "license": "MIT",
-  "unpkg": "dist/three-render-objects.min.js",
-  "main": "dist/three-render-objects.common.js",
-  "module": "dist/three-render-objects.module.js",
-  "types": "dist/three-render-objects.d.ts",
+  "unpkg": "dist/three-render-objects-fork.min.js",
+  "main": "dist/three-render-objects-fork.common.js",
+  "module": "dist/three-render-objects-fork.module.js",
+  "types": "dist/three-render-objects-fork.d.ts",
   "sideEffects": [
     "./src/*.css"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vasturiano/three-render-objects.git"
+    "url": "git+https://github.com/vasturiano/three-render-objects-fork.git"
   },
-  "homepage": "https://github.com/vasturiano/three-render-objects",
+  "homepage": "https://github.com/vasturiano/three-render-objects-fork",
   "keywords": [
     "3d",
     "three",
@@ -28,7 +28,7 @@
     "url": "http://bl.ocks.org/vasturiano"
   },
   "bugs": {
-    "url": "https://github.com/vasturiano/three-render-objects/issues"
+    "url": "https://github.com/vasturiano/three-render-objects-fork/issues"
   },
   "files": [
     "dist/**/*"

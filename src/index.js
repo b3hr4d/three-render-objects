@@ -1,3 +1,3 @@
-import './three-render-objects.css';
+import "./three-render-objects-fork.css"
 
-export { default } from "./three-render-objects.js"
+export { default } from "./three-render-objects-fork.js"
